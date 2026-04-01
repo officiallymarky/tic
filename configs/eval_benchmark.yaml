@@ -1,0 +1,43 @@
+# Tic 800B Evaluation Configuration
+
+evaluation:
+  model_path: "tic-ai/tic-800b"
+  
+  benchmarks:
+    optimal_play:
+      num_games: 10000
+      verbose: false
+    
+    self_play:
+      num_games: 1000
+      temperature: 0.0  # Greedy (optimal)
+    
+    inference:
+      num_iterations: 1000
+      warmup: 100
+      batch_sizes: [1, 8, 64]
+    
+    opening_analysis:
+      enabled: true
+
+metrics:
+  optimal_play_rate:
+    threshold: 0.99
+    description: "Percentage of optimal moves"
+  
+  self_play_draw_rate:
+    threshold: 0.99
+    description: "Self-play should always draw"
+  
+  inference_latency_p99_ms:
+    threshold: 10.0
+    description: "P99 inference latency in ms"
+  
+  memory_usage_gb:
+    threshold: 1600
+    description: "GPU memory for half precision"
+
+output:
+  format: "json"
+  save_path: "eval_results.json"
+  verbose: true

@@ -1,9 +1,5 @@
 # Tic: 800 Billion Parameter Tic-Tac-Toe Mastery
 
-<p align="center">
-  <img src="assets/logo.png" width="400" alt="Tic Model Architecture"/>
-</p>
-
 [![Model Size](https://img.shields.io/badge/Parameters-800B-blue)](https://arxiv.org/abs/XXXX.XXXXX)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.10+-orange)](https://python.org)
